@@ -1,4 +1,4 @@
-name: 'Yamllint GitHub Actions'
+name: 'YamlLint'
 on:
   push:
     branches: [ feature/test-branch ]
