@@ -1,7 +1,7 @@
 name: 'Yamllint GitHub Actions'
 on:
   push:
-    branches: [ test-branch ]
+    branches: [ feature/test-branch ]
 jobs:
   yamllint:
     name: 'Yamllint'
@@ -17,4 +17,3 @@ jobs:
           yamllint_comment: true
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
