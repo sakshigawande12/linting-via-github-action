@@ -5,7 +5,7 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ hadolint-test ]
+    branches: [ feature/test-branch ]
   
 jobs:
   job1:
@@ -25,10 +25,10 @@ jobs:
         uses: hadolint/hadolint-action@v1.5.0
         with:
          dockerfile: Dockerfile
-         ignore: DL3007 DL3025 DL4003
+         //ignore: DL3007 DL3025 DL4003
 
       - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
+         uses: docker/setup-buildx-action@v1
 
       - name: Login to DockerHub
         uses: docker/login-action@v1
@@ -42,7 +42,5 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: sakshigawande12/app:latest
-
-
+          tags: sakshigawande12/app:latest                                                                                                
 
